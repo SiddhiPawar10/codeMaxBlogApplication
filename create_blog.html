@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Blog - My Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="create_blog.html">Create Blog</a>
+    </nav>
+
+    <main class="create-container">
+
+        <section class="create-header">
+            <span class="section-tag">YOUR CREATIVE SPACE</span>
+            <h1>Bring Your Ideas to Life.</h1>
+            <p>Write something meaningful. Share your thoughts with the world.</p>
+        </section>
+
+        <section class="editor-card">
+            <h2>Create a New Story</h2>
+            <p class="editor-subtitle">Every great story starts with an idea.</p>
+
+            <form id="blogForm">
+                <label for="blogTitle">Blog Title</label>
+                <input type="text" id="blogTitle"
+                    placeholder="Give your story a title..." required>
+
+                <label for="blogCategory">Category</label>
+                <select id="blogCategory" required>
+                    <option value="">Select a category</option>
+                    <option>Technology</option>
+                    <option>Programming</option>
+                    <option>Web Development</option>
+                    <option>Education</option>
+                    <option>Personal</option>
+                </select>
+
+                <label for="blogContent">Your Story</label>
+                <textarea id="blogContent" rows="10"
+                    placeholder="Start writing your thoughts here..."
+                    required></textarea>
+
+                <div class="editor-actions">
+                    <a href="dashboard.html" class="cancel-link">Cancel</a>
+                    <button type="submit">Publish Story →</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,1001 @@
+
+/* =========================================
+   MY BLOG WEBSITE - COMPLETE STYLESHEET
+   Theme: Modern Teal Green
+========================================= */
+
+/* 1. DESIGN FOUNDATION */
+
+:root {
+    --background: #f7fbf9;
+    --surface: #ffffff;
+    --primary: #263b35;
+    --secondary: #737d79;
+    --accent: #35a98c;
+    --accent-dark: #238b73;
+    --accent-light: #e8fff8;
+    --border: #e2eee9;
+    --radius: 22px;
+    --shadow: 0 10px 35px rgba(35, 139, 115, 0.07);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--primary);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+}
+
+button, input, textarea, select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+::selection {
+    background: var(--accent);
+    color: white;
+}
+
+
+/* 2. TYPOGRAPHY */
+
+h1, h2, h3 {
+    color: var(--primary);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 750;
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+p {
+    color: var(--secondary);
+}
+
+
+/* 3. NAVIGATION BAR */
+
+nav {
+    width: 92%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 15px 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    background: rgba(255,255,255,0.95);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+
+    backdrop-filter: blur(15px);
+}
+
+nav a {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 16px;
+    border-radius: 20px;
+}
+
+nav a:hover {
+    background: var(--accent-light);
+    color: var(--accent-dark);
+}
+
+nav a:last-child {
+    background: var(--accent);
+    color: white;
+    padding: 10px 18px;
+}
+
+nav a:last-child:hover {
+    background: var(--accent-dark);
+    color: white;
+}
+
+
+/* 4. GENERAL LAYOUT */
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 25px 20px;
+}
+
+.section-tag {
+    display: inline-block;
+    color: var(--accent-dark);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+/* 5. COMMON BUTTONS */
+
+button {
+    padding: 13px 28px;
+    background: var(--accent);
+    color: white;
+    border: 1px solid var(--accent);
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+.primary-link {
+    display: inline-block;
+    padding: 14px 25px;
+    background: var(--accent);
+    color: white;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.primary-link:hover {
+    background: var(--accent-dark);
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* 6. HOME PAGE - HERO SECTION */
+
+.hero {
+    max-width: 1200px;
+    width: 92%;
+    min-height: 430px;
+    margin: 35px auto;
+    padding: 70px 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(135deg, #35a98c, #218d78);
+    border-radius: 28px;
+    box-shadow: 0 15px 40px rgba(35,139,115,0.18);
+}
+
+.hero-content {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.18);
+    color: white;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: clamp(48px, 7vw, 70px);
+    line-height: 1.1;
+    margin: 25px 0;
+    letter-spacing: -2px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #eafff8;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.hero .primary-link {
+    background: white;
+    color: var(--accent-dark);
+    padding: 15px 32px;
+}
+
+.hero .primary-link:hover {
+    background: var(--accent-light);
+    color: #176c59;
+}
+
+
+/* 7. BLOG SECTION AND CARDS */
+
+.blog-section {
+    max-width: 1200px;
+    margin: 70px auto;
+    padding: 20px;
+}
+
+.blog-section h2 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 40px;
+}
+
+.blog-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 28px;
+    padding: 25px 20px;
+}
+
+.blog-card {
+    width: 300px;
+    padding: 32px;
+
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    text-align: left;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 35px rgba(35,139,115,0.14);
+    border-color: var(--accent);
+}
+
+.blog-card::before {
+    content: "✦";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 20px;
+    border-radius: 13px;
+    background: var(--accent-light);
+    color: var(--accent-dark);
+    font-size: 20px;
+}
+
+.blog-card:nth-child(1)::before {
+    content: "⌘";
+}
+
+.blog-card:nth-child(2)::before {
+    content: "</>";
+}
+
+.blog-card:nth-child(3)::before {
+    content: "✧";
+}
+
+.blog-card h3 {
+    color: var(--accent-dark);
+    font-size: 21px;
+    margin-bottom: 14px;
+}
+
+.blog-card p {
+    color: var(--secondary);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* 8. LOGIN AND REGISTER */
+
+.auth-container {
+    max-width: 1200px;
+    width: 92%;
+    min-height: 650px;
+    margin: 45px auto;
+
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    overflow: hidden;
+
+    box-shadow: 0 15px 50px rgba(0,0,0,0.07);
+}
+
+.auth-form-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 55px;
+}
+
+.auth-form-panel h1 {
+    color: var(--accent);
+    font-size: 38px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.auth-form-panel form {
+    width: 100%;
+    max-width: 430px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+.auth-form-panel input:not([type="checkbox"]) {
+    width: 100%;
+    padding: 16px;
+    margin: 12px 0;
+    background: #fafcfb;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+.auth-form-panel input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(53,169,140,0.12);
+}
+
+.auth-form-panel .terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0 25px;
+    color: var(--secondary);
+    font-size: 14px;
+}
+
+.auth-form-panel .terms input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+}
+
+.auth-form-panel button {
+    display: block;
+    min-width: 180px;
+    margin: 25px auto 0;
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.auth-form-panel button:hover {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+.auth-welcome-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 45px;
+    text-align: center;
+
+    background: linear-gradient(135deg, #39b99a, #218d78);
+    color: white;
+}
+
+.auth-welcome-panel h2 {
+    color: white;
+    font-size: clamp(32px, 4vw, 48px);
+    margin-bottom: 15px;
+}
+
+.auth-welcome-panel p {
+    color: #e8fff8;
+    font-size: 17px;
+    margin: 10px 0 20px;
+}
+
+.auth-link {
+    display: inline-block;
+    padding: 12px 45px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.auth-link:hover {
+    background: white;
+    color: var(--accent-dark);
+}
+
+
+/* 9. DASHBOARD PAGE */
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 25px;
+}
+
+/* Welcome header */
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+
+    padding: 50px 40px;
+    background: linear-gradient(135deg, #35a98c, #218d78);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(35,139,115,0.16);
+}
+
+.dashboard-header h1 {
+    color: white;
+    font-size: 38px;
+    margin: 15px 0;
+}
+
+.dashboard-header p {
+    color: #eafff8;
+    line-height: 1.7;
+}
+
+.dashboard-header .section-tag {
+    color: white;
+    background: rgba(255,255,255,0.18);
+    padding: 9px 16px;
+    border-radius: 25px;
+}
+
+.dashboard-header .primary-link {
+    background: white;
+    color: var(--accent-dark);
+    white-space: nowrap;
+}
+
+.dashboard-header .primary-link:hover {
+    background: var(--accent-light);
+    color: #176c59;
+}
+
+/* Statistics cards */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin: 35px 0 50px;
+}
+
+.stat-card {
+    padding: 28px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 35px rgba(35,139,115,0.12);
+}
+
+.stat-card span {
+    color: var(--secondary);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.stat-card h2 {
+    color: var(--accent-dark);
+    font-size: 36px;
+    margin: 12px 0 5px;
+}
+
+.stat-card p {
+    font-size: 13px;
+}
+
+/* Dashboard posts */
+
+.dashboard-posts {
+    margin-top: 30px;
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    margin-top: 8px;
+    font-size: 30px;
+}
+
+.dashboard-posts .blog-container {
+    justify-content: flex-start;
+    padding: 15px 0;
+}
+
+.dashboard-posts .blog-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 1 260px;
+    max-width: 360px;
+    min-height: 250px;
+}
+
+.post-category {
+    display: inline-block;
+    padding: 7px 12px;
+    color: var(--accent-dark);
+    background: var(--accent-light);
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.dashboard-posts .blog-card h3 {
+    margin-top: 18px;
+}
+
+.dashboard-posts .blog-card p {
+    margin-bottom: 20px;
+}
+
+.post-status {
+    display: inline-block;
+    margin-top: auto;
+    padding: 6px 13px;
+    color: #287a54;
+    background: #e7f5eb;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.draft-status {
+    color: #9a7130;
+    background: #fff3d9;
+}
+
+
+/* 10. CREATE BLOG PAGE */
+
+.create-container {
+    max-width: 1100px;
+    width: 92%;
+    margin: 45px auto;
+    padding: 20px;
+}
+
+.create-header {
+    margin: 25px auto 35px;
+    padding: 55px 35px;
+    text-align: center;
+
+    background: linear-gradient(135deg, #35a98c, #218d78);
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(35,139,115,0.16);
+}
+
+.create-header h1 {
+    color: white;
+    font-size: 38px;
+    margin: 15px 0;
+}
+
+.create-header p {
+    color: #eafff8;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Editor card */
+
+.editor-card {
+    max-width: 850px;
+    margin: 30px auto 50px;
+    padding: 45px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+}
+
+.editor-card h2 {
+    color: var(--primary);
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.editor-subtitle {
+    color: var(--secondary);
+    margin-bottom: 30px;
+}
+
+.editor-card form {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.editor-card label {
+    display: block;
+    margin: 22px 0 9px;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.editor-card input,
+.editor-card select,
+.editor-card textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 12px;
+    background: #fafcfb;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.editor-card input:focus,
+.editor-card select:focus,
+.editor-card textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(53,169,140,0.12);
+    background: white;
+}
+
+.editor-card textarea {
+    min-height: 180px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.editor-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.cancel-link {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.cancel-link:hover {
+    color: var(--accent-dark);
+}
+
+.editor-actions button {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.editor-actions button:hover {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+
+/* 11. GENERAL FORM ELEMENTS */
+
+input, textarea, select {
+    color: var(--primary);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #a0aaa5;
+}
+
+select {
+    cursor: pointer;
+}
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline-offset: 3px;
+}
+
+
+/* 12. RESPONSIVE DESIGN - TABLETS */
+
+@media (max-width: 768px) {
+
+    nav {
+        width: 94%;
+        padding: 12px;
+        gap: 6px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 50px 22px;
+        margin: 20px auto;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .blog-container {
+        gap: 18px;
+        padding: 20px 10px;
+    }
+
+    .blog-card {
+        width: 45%;
+    }
+
+    /* Authentication */
+
+    .auth-container {
+        grid-template-columns: 1fr;
+        margin: 25px auto;
+    }
+
+    .auth-form-panel {
+        padding: 45px 30px;
+    }
+
+    .auth-welcome-panel {
+        min-height: 250px;
+        padding: 40px 25px;
+    }
+
+    /* Dashboard */
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 35px 30px;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .dashboard-posts .blog-container {
+        justify-content: center;
+    }
+
+    .dashboard-posts .blog-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Create Blog */
+
+    .create-header {
+        padding: 40px 20px;
+    }
+
+    .editor-card {
+        padding: 30px;
+    }
+}
+
+
+/* 13. RESPONSIVE DESIGN - MOBILE */
+
+@media (max-width: 600px) {
+
+    nav {
+        border-radius: 12px;
+    }
+
+    .hero {
+        min-height: 320px;
+        padding: 35px 22px;
+        border-radius: 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .blog-section {
+        margin: 40px auto;
+        padding: 15px;
+    }
+
+    .blog-section h2 {
+        font-size: 27px;
+        margin-bottom: 28px;
+    }
+
+    .blog-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-card {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    /* Authentication */
+
+    .auth-container {
+        width: 94%;
+        border-radius: 18px;
+    }
+
+    .auth-form-panel {
+        padding: 35px 22px;
+    }
+
+    .auth-form-panel h1 {
+        font-size: 30px;
+    }
+
+    .auth-welcome-panel h2 {
+        font-size: 32px;
+    }
+
+    /* Dashboard */
+
+    .dashboard-container {
+        padding: 12px;
+    }
+
+    .dashboard-header {
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 30px;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    /* Create Blog */
+
+    .create-container {
+        width: 94%;
+        padding: 10px;
+        margin: 25px auto;
+    }
+
+    .create-header {
+        padding: 35px 18px;
+        border-radius: 20px;
+    }
+
+    .create-header h1 {
+        font-size: 30px;
+    }
+
+    .create-header p {
+        font-size: 14px;
+    }
+
+    .editor-card {
+        padding: 25px 20px;
+        border-radius: 18px;
+    }
+
+    .editor-card h2 {
+        font-size: 24px;
+    }
+
+    .editor-actions {
+        justify-content: space-between;
+    }
+
+    .editor-actions button {
+        padding: 12px 20px;
+    }
+}
+
+
+/* 14. ACCESSIBILITY - REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+/* FIX CREATE BLOG NAVBAR COLOR */
+
+nav a[href="create_blog.html"] {
+    background: #35a98c;
+    color: #ffffff;
+    border-radius: 25px;
+}
+
+nav a[href="create_blog.html"]:hover {
+    background: #238b73;
+    color: #ffffff;
+}
